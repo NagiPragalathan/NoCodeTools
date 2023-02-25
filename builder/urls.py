@@ -1,7 +1,7 @@
 from django.urls import path
-from .Routes import NoCodeViews
-from .Routes import BlogViews
-
+from .Routes import NoCodeViews, BlogViews
+from WebpageBuilderDjango import settings
+from django.conf.urls.static import static
 
 #Initilizes........................
 
@@ -41,4 +41,4 @@ BlogBuilder = [
 # Add Paths Together..............
 
 urlpatterns.extend(Make_Join([NoCodeMaker,BlogBuilder]))
-
+urlpatterns += static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
