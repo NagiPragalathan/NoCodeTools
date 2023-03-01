@@ -17,7 +17,8 @@ def Make_Join(Componets):
 # Paths.............................
 
 NoCodeMaker = [
-    path('',common.home, name='home'),
+    path('',NoCodeViews.index, name='home'),
+    path('home',common.home, name='home'),
     path('add', NoCodeViews.addPage, name="addpage"),
     path('edit/<id>', NoCodeViews.editPage, name="editpage"),
     path('page/create', NoCodeViews.savePage, name="create_page"),
