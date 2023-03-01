@@ -1,5 +1,5 @@
 from django.urls import path
-from .Routes import NoCodeViews, BlogViews
+from .Routes import NoCodeViews, BlogViews,common
 from WebpageBuilderDjango import settings
 from django.conf.urls.static import static
 
@@ -17,7 +17,7 @@ def Make_Join(Componets):
 # Paths.............................
 
 NoCodeMaker = [
-    path('',NoCodeViews.index, name='home'),
+    path('',common.home, name='home'),
     path('add', NoCodeViews.addPage, name="addpage"),
     path('edit/<id>', NoCodeViews.editPage, name="editpage"),
     path('page/create', NoCodeViews.savePage, name="create_page"),

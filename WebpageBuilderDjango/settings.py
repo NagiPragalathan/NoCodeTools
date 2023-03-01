@@ -28,6 +28,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+SERVER_TIMEOUT = 600
 
 # Application definition
 
